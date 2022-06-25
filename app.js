@@ -36,7 +36,7 @@ function generateChartDays(item) {
               <span class="bar ${data.currentDay === true ? 'bar-current' : ''} bar-${data.dayName}"></span>
               <span class="fs-weekday">${data.dayName}</span>
             </button>
-            <p aria-label="hidden" class="bar-amt">${formatToCurrency(
+            <p class="bar-amt">${formatToCurrency(
               data.dayAmt,
             )}</p>
           </li>
