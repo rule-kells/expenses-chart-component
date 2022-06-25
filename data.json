@@ -1,0 +1,37 @@
+[
+  {
+    "fullWeekDay": "Monday",
+    "day": "mon",
+    "amount": 17.45
+  },
+  {
+    "fullWeekDay": "Tuesday",
+    "day": "tue",
+    "amount": 34.91
+  },
+  {
+    "fullWeekDay": "Wednesday",
+    "day": "wed",
+    "amount": 52.36
+  },
+  {
+    "fullWeekDay": "Thursday",
+    "day": "thu",
+    "amount": 31.07
+  },
+  {
+    "fullWeekDay": "Friday",
+    "day": "fri",
+    "amount": 23.39
+  },
+  {
+    "fullWeekDay": "Saturday",
+    "day": "sat",
+    "amount": 43.28
+  },
+  {
+    "fullWeekDay": "Sunday",
+    "day": "sun",
+    "amount": 25.48
+  }
+]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+
+
+</head>
+
+<body class="bg--body">
+  <main class="flex">
+    <div class="balance container flex bg--primary">
+      <div class="balance__content">
+        <h2 class="title">My balance</h2>
+        <p class="amt">$921.48</p>
+      </div>
+      <img src="./images/logo.svg" alt="">
+    </div>
+
+    <div class="component container bg--neutral">
+      <div class="component__content">
+        <h3 class="title">Spending - Last 7 days</h3>
+        <ul id="chart" class="flex">
+        </ul>
+      </div>
+
+      <div class="total-month flex">
+        <div class="current-month flow-content">
+          <h3 class="title">Total this month</h3>
+          <p class="amt">$478.33</p>
+        </div>
+        <div class="last-month flow-content">
+          <p class="amt">+2.4%</p>
+          <h3 class="title">from last month</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Kellen Ruyle</a>.
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>

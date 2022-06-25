@@ -1,0 +1,376 @@
+:root {
+    /* ### Colors ### */
+
+    /* ## Primary ##  */
+
+    /* Soft red  */
+    --clr-palette-primary-300: hsl(186, 34%, 60%);
+    --clr-palette-primary-400: hsl(10, 79%, 65%);
+    /* Cyan  */
+
+    /* ## Neutral ##  */
+
+
+    /* Dark brown */
+    --clr-palette-neutral-800: hsl(25, 47%, 15%);
+    /* Medium brown  */
+    --clr-palette-neutral-500: hsl(28, 10%, 53%);
+    /* Cream */
+    --clr-palette-neutral-300: hsl(27, 66%, 92%);
+    /* - Very pale orange:  */
+    --clr-palette-neutral-200: hsl(33, 100%, 98%);
+
+    /* ### Typography ### */
+
+    /* ## Body Copy ##  */
+    --fs-balance: clamp(0.9375rem, 3vw, 1.125rem);
+    --fs-balance-amt: clamp(1.5rem, 5vw, 2rem);
+    --fs-spending: clamp(1.5rem, 5vw, 2rem);
+    --fs-weekday: clamp(0.75rem, 2.5vw, 0.9375rem);
+    --fs-total-month: clamp(0.9375rem, 3vw, 1.125rem);
+    --fs-current-month-amt: clamp(1.875rem, 5.5vw, 3rem);
+    --fs-last-month-amt: clamp(0.9375rem, 3vw, 1.125rem);
+    --fs-body: 1.125rem;
+
+    --ff-primary: 'DM Sans',
+        sans-serif;
+
+    /* ##font weight ##  */
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --br: 1.25rem;
+}
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    font-size: 1.125rem;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+ul[class] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+button {
+    all: unset;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.balance__content .title {
+    font-size: var(--fs-balance);
+    font-weight: var(--fw-400);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.balance__content .amt {
+    font-size: var(--fs-balance-amt);
+    font-weight: var(--fw-700);
+}
+
+.component__content .title {
+    color: var(--clr-palette-neutral-800);
+    font-size: var(--fs-spending);
+    font-weight: var(--fw-700);
+    margin-bottom: 3.25rem;
+}
+
+.fs-weekday {
+    font-size: var(--fs-weekday);
+}
+
+.total-month .title {
+    font-size: var(--fs-total-month);
+    font-weight: var(--fw-400);
+}
+
+.current-month .amt {
+    display: inline-block;
+    color: var(--clr-palette-neutral-800);
+    font-size: var(--fs-current-month-amt);
+    font-weight: var(--fw-700);
+    margin-top: 0.5rem;
+    line-height: 0.9;
+}
+
+.last-month .amt {
+    color: var(--clr-palette-neutral-800);
+    font-size: var(--fs-last-month-amt);
+    font-weight: var(--fw-700);
+    display: inline-block;
+}
+
+.flow-content>*+* {
+    margin-top: var(--gap, 0.25rem);
+
+}
+
+
+main.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    gap: 1em;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    width: clamp(20ch, 90%, 33.75rem);
+}
+
+.bg--body {
+    color: var(--clr-palette-neutral-500);
+    background-color: var(--clr-palette-neutral-300);
+}
+
+.bg--primary {
+    background-color: var(--clr-palette-primary-400);
+    color: var(--clr-palette-neutral-200);
+}
+
+.bg--neutral {
+    background-color: var(--clr-palette-neutral-200);
+    color: var(--clr-palette-neutral-500);
+}
+
+.balance.container {
+    padding: 1.25rem 1.25rem 1.375rem;
+    border-radius: var(--br);
+}
+
+.component.container {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--br);
+}
+
+.component__content {
+    padding-bottom: 1.5rem;
+}
+
+.component__content .flex {
+    text-align: center;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.total-month .flex {
+    align-items: center;
+
+}
+
+#chart li+li {
+    margin-left: 0.75rem;
+}
+
+.bar {
+    --br: 0.1875rem;
+    display: block;
+    width: 2.0625rem;
+    background-color: var(--clr-palette-primary-400);
+    border-radius: var(--br);
+}
+
+
+.bar-mon {
+    height: 3.125rem;
+}
+
+.bar-tue {
+    height: 6.25rem;
+}
+
+.bar-wed {
+    height: 9.375rem;
+}
+
+.bar-thu {
+    height: 5.5625rem;
+}
+
+.bar-fri {
+    height: 4.1875rem;
+}
+
+.bar-sat {
+    height: 7.75rem;
+}
+
+.bar-sun {
+    height: 4.5625rem;
+}
+
+.bar-current {
+    background-color: var(--clr-palette-primary-300);
+}
+
+.bar-amt {
+    display: none;
+}
+
+.total-month {
+    --br: 0.0625rem;
+
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--clr-palette-neutral-300);
+    border-radius: var(--br);
+}
+
+.last-month {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.current-month,
+.total-month {
+    --gap: 0.0625rem;
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--clr-palette-primary-300);
+    font-weight: var(--fw-700);
+}
+
+/* desktop  */
+
+@media (min-width: 40em) {
+
+    .balance {
+        border-radius: var(--br);
+    }
+
+    .balance.container {
+        padding: 1.6875rem 2.4375rem 1.5625rem 2rem;
+    }
+
+    .balance__content .title {
+        margin-bottom: 0.5rem;
+    }
+
+
+    .component__content .title {
+        margin-bottom: 4.125rem;
+    }
+
+    .component.container {
+        padding: 2rem 2.5rem 2.5rem;
+    }
+
+    .component__content {
+        padding-bottom: 2rem;
+    }
+
+    #chart li {
+        position: relative;
+    }
+
+    #chart li+li {
+        margin-left: 1.125rem;
+    }
+
+    .bar {
+        --br: 0.375rem;
+        width: 3.1475rem;
+        cursor: pointer;
+        transition: background-color .25s ease-in;
+    }
+
+    .bar-amt {
+        --br: 0.3125rem;
+
+        cursor: pointer;
+        transition: background-color .25s ease-in;
+        top: -3rem;
+        left: 50%;
+        right: 0;
+        transform: translateX(-50%);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 4.6875rem;
+        height: 2.5rem;
+        background-color: var(--clr-palette-neutral-800);
+        color: var(--clr-palette-neutral-200);
+        border-radius: var(--br);
+        font-size: 1.125rem;
+        font-weight: var(--fw-700);
+    }
+
+    .bar:hover,
+    .bar:active {
+        background-color: hsla(10, 100%, 76%, 1);
+    }
+
+    .bar-current:hover,
+    .bar-current:active {
+        background-color: hsla(186, 49%, 80%, 1);
+    }
+
+    .weekday:hover+.bar-amt,
+    .weekday:active+.bar-amt {
+        display: flex;
+    }
+
+    .total-month {
+        padding-top: 2rem;
+    }
+}
